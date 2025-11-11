@@ -1,0 +1,7 @@
+    while AutoPunchEnabled do
+        local tool = lp.Character and lp.Character:FindFirstChildOfClass("Tool")
+        if tool then
+            pcall(function() tool:Activate() end)
+        end
+        task.wait(PunchDelay)
+    end
