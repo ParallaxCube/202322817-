@@ -1,0 +1,14 @@
+        stam = state
+        local stamscript = require(game.ReplicatedStorage.Systems.Character.Game.Sprinting)
+        
+        local connection
+        connection = game:GetService("RunService").Heartbeat:Connect(function()
+            if not stam then
+                connection:Disconnect()
+                stamscript.StaminaLossDisabled = nil
+                return
+            end
+            stamscript.StaminaLossDisabled = function() 
+            end
+        end)
+       
