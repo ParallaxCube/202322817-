@@ -1,0 +1,87 @@
+local lp = game.Players.LocalPlayer
+local AutoPunchEnabled = false
+local PunchDelay = 0.5
+local isHighlightActive = false
+local toolhighlightactive = false
+local hawktuahactive = false
+local isCorruptNatureEspActive = false
+local isSurvivorUtilEspActive = false
+local run = false
+local delay
+local isSurvivorHighlightActive = false
+local givepizza = false
+local connections = {}
+local isKillerHighlightActive = false
+local hideplayerbar = false
+local VirtualBallsManager = game:GetService('VirtualInputManager')
+local jumppowerenabled = false
+local survivorutil = {
+    "007n7",
+    "BuildermanSentry",
+    "BuildermanDispenser",
+    "Pizza",
+    "BuildermanSentryEffectRange"
+}
+local aimbot1x1sounds = {
+    "rbxassetid://79782181585087",
+    "rbxassetid://128711903717226"
+}
+local chanceaimbotsounds = {
+    "rbxassetid://201858045",
+    "rbxassetid://139012439429121"
+}
+local johnaimbotsounds = {
+    "rbxassetid://109525294317144"
+}
+local jasonaimbotsounds = {
+    "rbxassetid://112809109188560",
+    "rbxassetid://102228729296384"
+}
+local shedaimbotsounds = {
+    "rbxassetid://12222225",
+    "rbxassetid://83851356262523"
+}
+local guestsounds = {
+    "rbxassetid://609342351"
+}
+local hawktuahactivatesound = {
+    "rbxassetid://110759725172567"
+}
+local hakariactive = false
+local quietactive = false
+local stam = false
+local connection
+local chanceaim = false
+local chanceaimbotLoop
+local jasonaimbotloop
+local genshouldloop = false
+local genactive = false
+local aimbot1x1loop
+local johnloop
+local guestloop
+local shedloop
+local player = game.Players.LocalPlayer
+local aimbot1x1 = false
+local johnaim = false
+local connection
+local jasonaim = false
+local shedaim = false
+local guestaim = false
+local CoreGui = game:GetService("StarterGui") 
+local Players = game:GetService("Players")
+local HttpService = game:GetService("HttpService")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local TweenService = game:GetService("TweenService")
+local RunService = game:GetService("RunService")
+local Players = game:GetService("Players")
+local lp = Players.LocalPlayer
+local PlayerGui = lp:WaitForChild("PlayerGui")
+local Humanoid, Animator
+local StarterGui  = game:GetService("StarterGui")
+local TestService = game:GetService("TestService")
+local ChatEvents = ReplicatedStorage:FindFirstChild("DefaultChatSystemChatEvents")
+local SayMessageRequest = ChatEvents and ChatEvents:FindFirstChild("SayMessageRequest")
+local testRemote = ReplicatedStorage:WaitForChild("Modules"):WaitForChild("Network"):WaitForChild("RemoteEvent")
+local userInputService = game:GetService("UserInputService")
+local replicatedStorage = game:GetService("ReplicatedStorage")
+local debris = game:GetService("Debris")
