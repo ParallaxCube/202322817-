@@ -1,0 +1,37 @@
+-- chance aimbot
+ if game.Players.LocalPlayer.Character.Name ~= "Chance" and state then
+  Rayfield:Notify{Title = "Wrong Character", Content = "Oops, your current character isn't Chance, this POSSIBLY can bug out, so untoggle unless you're on Chance!", Duration = 5}
+  return 
+        end
+        if state then
+  chanceaimbotLoop = game.Players.LocalPlayer.Character.HumanoidRootPart.ChildAdded:Connect(function(child)
+      if not chanceaim then return end
+      for _, v in pairs(chanceaimbotsounds) do
+if child.Name == v  then
+    local killer = game.Workspace.Players:FindFirstChild("Killers"):FindFirstChildOfClass("Model")
+    if killer and killer:FindFirstChild("HumanoidRootPart") then
+        local killerHRP = killer.HumanoidRootPart
+        local playerHRP = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+        if playerHRP then
+  local direction = (killerHRP.Position - playerHRP.Position).Unit
+  local num = 1
+  local maxIterations = 100
+        
+  
+      while num <= maxIterations do
+task.wait(0.01)
+num = num + 1
+workspace.CurrentCamera.CFrame = CFrame.new(workspace.CurrentCamera.CFrame.Position, killerHRP.Position)
+playerHRP.CFrame = CFrame.lookAt(playerHRP.Position, Vector3.new(killerHRP.Position.X, killerHRP.Position.Y, killerHRP.Position.Z))
+end
+ end
+  end
+   end
+    end
+     end)
+      else
+       if chanceaimbotLoop then
+        chanceaimbotLoop:Disconnect()
+         chanceaimbotLoop = nil
+          end
+           end
