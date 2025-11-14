@@ -1,0 +1,12 @@
+-- Greet the local player
+local Players = game:GetService("Players")
+local TextChatService = game:GetService("TextChatService")
+-- Define the LocalPlayer right away so we can use their name
+local localPlayer = Players.LocalPlayer 
+local RBXGeneral = TextChatService:WaitForChild("TextChannels"):WaitForChild("RBXGeneral")
+-- 1. Greet the local player who is running the script
+if localPlayer then
+    RBXGeneral:DisplaySystemMessage(string.format("Heyyy!!, %s! Your Script is Ready and should have loaded!!"))
+end
+print ("ShockCatStudio Was Executed for "..localPlayer.DisplayName .."!")
+print ("Startup greeter was executed")
